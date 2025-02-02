@@ -1,2 +1,2 @@
 # namespace_yyang
-Everything uder namespace yyang
+Everything under namespace yyang
