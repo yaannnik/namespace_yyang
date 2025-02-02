@@ -1,5 +1,6 @@
-#include <mutex>
 #include <mysingletonmeyers.h>
+
+#include <mutex>
 
 namespace yyang {
 
@@ -26,4 +27,4 @@ void MySingletonMeyers::log(const std::string &str) {
 
 void MySingletonMeyers::init() { std::cout << "Some init here" << std::endl; }
 
-} // namespace yyang
+}  // namespace yyang
