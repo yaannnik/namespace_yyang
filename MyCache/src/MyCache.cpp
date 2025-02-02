@@ -2,7 +2,8 @@
 
 namespace yyang {
 
-template <typename K, typename V> MyCache<K, V> &MyCache<K, V>::instance() {
+template <typename K, typename V>
+MyCache<K, V> &MyCache<K, V>::instance() {
   static MyCache<K, V> instance;
   return instance;
 }
@@ -25,7 +26,8 @@ bool MyCache<K, V>::update(const K &key, const V &val) {
   return true;
 }
 
-template <typename K, typename V> bool MyCache<K, V>::erase(const K &key) {
+template <typename K, typename V>
+bool MyCache<K, V>::erase(const K &key) {
   std::unique_lock<std::shared_mutex> lock(m_mtx);
   if (!m_cache.count(key)) {
     return false;
@@ -48,4 +50,4 @@ const V *const MyCache<K, V>::query(const K &key) const {
 // don't forget declare here
 template class MyCache<int, std::string>;
 
-} // namespace yyang
+}  // namespace yyang

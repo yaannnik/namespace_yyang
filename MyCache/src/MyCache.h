@@ -8,8 +8,9 @@
 
 namespace yyang {
 
-template <typename K, typename V> class MyCache {
-public:
+template <typename K, typename V>
+class MyCache {
+ public:
   static MyCache &instance();
 
   bool insert(const K &key, const V &val);
@@ -18,7 +19,7 @@ public:
   bool erase(const K &key);
   const V *const query(const K &key) const;
 
-private:
+ private:
   MyCache() = default;
   ~MyCache() = default;
 
@@ -28,6 +29,6 @@ private:
   std::map<K, V> m_cache;
   mutable std::shared_mutex m_mtx;
 };
-} // namespace yyang
+}  // namespace yyang
 
 #endif
