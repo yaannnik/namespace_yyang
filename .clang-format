@@ -1,5 +1,5 @@
-BasedOnStyle: LLVM  # VSCode's default style is similar to Google
+BasedOnStyle: Google  # VSCode's default style is similar to Google
 IndentWidth: 4
-UseTab: Always  # Use tabs instead of spaces
-TabWidth: 4
+IndentWrappedFunctionNames: false
+UseTab: Never  # Use tabs instead of spaces
 AccessModifierOffset: -4

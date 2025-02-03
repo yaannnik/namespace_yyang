@@ -10,24 +10,24 @@ namespace yyang {
 
 template <typename K, typename V>
 class MyCache {
- public:
-  static MyCache &instance();
+public:
+    static MyCache &instance();
 
-  bool insert(const K &key, const V &val);
-  bool update(const K &key, const V &val);
+    bool insert(const K &key, const V &val);
+    bool update(const K &key, const V &val);
 
-  bool erase(const K &key);
-  const V *const query(const K &key) const;
+    bool erase(const K &key);
+    const V *const query(const K &key) const;
 
- private:
-  MyCache() = default;
-  ~MyCache() = default;
+private:
+    MyCache() = default;
+    ~MyCache() = default;
 
-  MyCache(const MyCache &obj) = delete;
-  MyCache &operator=(const MyCache &obj) = delete;
+    MyCache(const MyCache &obj) = delete;
+    MyCache &operator=(const MyCache &obj) = delete;
 
-  std::map<K, V> m_cache;
-  mutable std::shared_mutex m_mtx;
+    std::map<K, V> m_cache;
+    mutable std::shared_mutex m_mtx;
 };
 }  // namespace yyang
 

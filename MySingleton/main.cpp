@@ -1,6 +1,7 @@
-#include <iostream>
 #include <mysingletonlazy.h>
 #include <mysingletonmeyers.h>
+
+#include <iostream>
 
 int main() {
     // yyang::MySingletonLazy::instance().log("Test in main");

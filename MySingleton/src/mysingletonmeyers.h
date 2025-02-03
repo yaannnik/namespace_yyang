@@ -9,22 +9,22 @@ namespace yyang {
 
 class MySingletonMeyers {
 public:
-  static MySingletonMeyers& instance();
+    static MySingletonMeyers &instance();
 
-  void log(const std::string &str);
+    void log(const std::string &str);
 
 private:
-  MySingletonMeyers();
-  ~MySingletonMeyers();
+    MySingletonMeyers();
+    ~MySingletonMeyers();
 
-  MySingletonMeyers(const MySingletonMeyers &obj);
-  MySingletonMeyers &operator=(const MySingletonMeyers &obj);
+    MySingletonMeyers(const MySingletonMeyers &obj);
+    MySingletonMeyers &operator=(const MySingletonMeyers &obj);
 
-  static void init();
+    static void init();
 
-  static std::once_flag m_flag;
+    static std::once_flag m_flag;
 };
 
-} // namespace yyang
+}  // namespace yyang
 
 #endif

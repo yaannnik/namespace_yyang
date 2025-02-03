@@ -11,23 +11,23 @@ namespace yyang {
 typedef std::function<void()> Job;
 
 class MyThreadPool {
- public:
-  MyThreadPool(int size);
+public:
+    MyThreadPool(int size);
 
-  ~MyThreadPool();
+    ~MyThreadPool();
 
-  void start();
+    void start();
 
-  void enqueue(const Job& job);
+    void enqueue(const Job& job);
 
- private:
-  std::vector<std::thread> m_threadPool;
-  std::queue<Job> m_jobQueue;
+private:
+    std::vector<std::thread> m_threadPool;
+    std::queue<Job> m_jobQueue;
 
-  std::mutex m_mtx;
-  std::condition_variable m_cv;
+    std::mutex m_mtx;
+    std::condition_variable m_cv;
 
-  bool m_clearAll;
-  int m_poolSize;
+    bool m_clearAll;
+    int m_poolSize;
 };
 }  // namespace yyang

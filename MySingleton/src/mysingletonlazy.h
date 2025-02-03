@@ -9,22 +9,22 @@ namespace yyang {
 
 class MySingletonLazy {
 public:
-  static MySingletonLazy& instance();
+    static MySingletonLazy &instance();
 
-  void log(const std::string &str);
+    void log(const std::string &str);
 
 private:
-  MySingletonLazy();
-  ~MySingletonLazy();
+    MySingletonLazy();
+    ~MySingletonLazy();
 
-  MySingletonLazy(const MySingletonLazy &) = delete;
-  MySingletonLazy &operator=(const MySingletonLazy &) = delete;
+    MySingletonLazy(const MySingletonLazy &) = delete;
+    MySingletonLazy &operator=(const MySingletonLazy &) = delete;
 
-  static void init();
-  static MySingletonLazy m_instance;
-  static std::once_flag m_onceFlag;
+    static void init();
+    static MySingletonLazy m_instance;
+    static std::once_flag m_onceFlag;
 };
 
-} // namespace yyang
+}  // namespace yyang
 
-#endif // MYSINGLETONLAZY_H
+#endif  // MYSINGLETONLAZY_H
