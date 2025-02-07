@@ -8,7 +8,7 @@ MyThreadPool::~MyThreadPool() {
         std::unique_lock<std::mutex> lck(m_mtx);
         m_clearAll = true;
     }
-    m_cv.notify_one();
+    m_cv.notify_all();
 
     for (auto &t : m_threadPool) {
         t.join();
