@@ -1,5 +1,21 @@
-BasedOnStyle: Google  # VSCode's default style is similar to Google
+BasedOnStyle: Google
+
+SortIncludes: true
+
+AlignConsecutiveDeclarations: true
+AlignTrailingComments: true
+
 IndentWidth: 4
-IndentWrappedFunctionNames: false
-UseTab: Never  # Use tabs instead of spaces
-AccessModifierOffset: -4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+
+IncludeBlocks: Preserve
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterFunction: true
+  AfterClass: true
+
+SpacesInParentheses: false
+SpaceAfterCStyleCast: true

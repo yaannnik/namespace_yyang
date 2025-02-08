@@ -7,13 +7,14 @@
 
 namespace yyang {
 
-class MySingletonMeyers {
-public:
+class MySingletonMeyers
+{
+   public:
     static MySingletonMeyers &instance();
 
     void log(const std::string &str);
 
-private:
+   private:
     MySingletonMeyers();
     ~MySingletonMeyers();
 

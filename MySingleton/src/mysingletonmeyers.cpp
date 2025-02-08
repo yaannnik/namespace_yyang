@@ -6,22 +6,26 @@ namespace yyang {
 
 std::once_flag MySingletonMeyers::m_flag;
 
-MySingletonMeyers::MySingletonMeyers() {
+MySingletonMeyers::MySingletonMeyers()
+{
     std::cout << "Construct MySingletonMeyers object" << std::endl;
 }
 
-MySingletonMeyers::~MySingletonMeyers() {
+MySingletonMeyers::~MySingletonMeyers()
+{
     std::cout << "De-Contruct MySingletonMeyers object" << std::endl;
 }
 
-MySingletonMeyers &MySingletonMeyers::instance() {
+MySingletonMeyers &MySingletonMeyers::instance()
+{
     static MySingletonMeyers instance;
     std::call_once(MySingletonMeyers::m_flag, &MySingletonMeyers::init);
 
     return instance;
 }
 
-void MySingletonMeyers::log(const std::string &str) {
+void MySingletonMeyers::log(const std::string &str)
+{
     std::cout << __TIMESTAMP__ << " MySingletonMeyers: " << str << std::endl;
 }
 

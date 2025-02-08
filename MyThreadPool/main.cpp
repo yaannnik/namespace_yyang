@@ -4,7 +4,8 @@
 
 std::mutex streamMutex;
 
-int main() {
+int main()
+{
     yyang::MyThreadPool mtp(3);
     mtp.start();
 

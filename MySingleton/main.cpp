@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-int main() {
+int main()
+{
     // yyang::MySingletonLazy::instance().log("Test in main");
 
     yyang::MySingletonMeyers::instance().log("Test in main");
