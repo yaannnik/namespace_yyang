@@ -1,7 +1,8 @@
 BasedOnStyle: Google
 
-SortIncludes: true
+AccessModifierOffset: 0  # Ensures 'private:' and 'public:' are not indented
 
+SortIncludes: true
 AlignConsecutiveDeclarations: true
 AlignTrailingComments: true
 
